@@ -1,0 +1,30 @@
+{% extends 'base.html' %}{% load static %} {% block stylesheet %}
+<link rel="stylesheet" href="{% static 'submit.css' %}" />
+{% endblock %} {%block main%}
+
+<div class="wrapper">
+  <img src="{% static 'assets/success.png' %}" alt="Submitted" />
+  <h1>Submitted Successfully</h1>
+  <div class="nav">
+    <button type="button" class="btn" id="reviewbtn">
+      <a href="#review">REVIEW</a>
+    </button>
+    <button type="button" class="btn" id="nextbtn">NEXT &gt;</button>
+  </div>
+</div>
+<div class="review" id="review" style="display: none">
+  <p>Name: {{user.full_name}}</p>
+  <p>Gender: {{user.gender}}</p>
+  <p>Email ID: {{user.email}}</p>
+  <p>Phone No: {{user.phone_no}}</p>
+  <p>DOB: {{user.date_of_birth}}</p>
+</div>
+
+<script>
+  let review = document.querySelector(".review");
+  let review_btn = document.querySelector("#reviewbtn");
+  review_btn.addEventListener("click", function () {
+    review.style.display = "block";
+  });
+</script>
+{% endblock %}

@@ -30,4 +30,4 @@ def portfolio(request):
 
     user = FormData.objects.get(email="sm@mail.com")
 
-    return render(request, 'pf.html', context={'user': user})
+    return render(request, 'submit.html', context={'user': user})

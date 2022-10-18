@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolior</title>
+    <meta name="description" content="" />
+    {% block stylesheet %}{% endblock %}
+  </head>
+  <body>
+    <header class="header">
+      <img src="{% static 'assets/Image 2.png' %}" width="35" />
+      <h1>Portfolior</h1>
+    </header>
+    <main>{% block main %} {% endblock %}</main>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

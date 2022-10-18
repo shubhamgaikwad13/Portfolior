@@ -8,6 +8,7 @@ function changeStep(action) {
   forms[currentStep].style.display = "none";
   currentStep = action == "prev" ? currentStep - 1 : currentStep + 1;
   forms[currentStep].style.display = "block";
+
   nextBtn.style.display = "inline-block";
   submitBtn.style.display = "none";
 
