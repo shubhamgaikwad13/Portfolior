@@ -1,0 +1,254 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolior</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="{% static 'assets/Image 2.png' %}" width="35" />
+      <h1>Portfolior</h1>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="form-container" id="101">
+          <form action="{% url 'portfolio' %}" method="post">
+            {% csrf_token %}
+            <div class="form" id="form1" style="display: block">
+              <h1>Personal Info</h1>
+              <div class="form-input">
+                <span class="icon">
+                  <img
+                    src="{% static 'assets/fname.svg' %}"
+                    alt=""
+                    width="13x"
+                  />
+                </span>
+                <input
+                  type="text"
+                  name="full_name"
+                  id=""
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img
+                    src="{% static 'assets/email.svg' %}"
+                    alt=""
+                    width="13x"
+                  />
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="Email Id"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img
+                    src="{% static 'assets/phone.svg' %}"
+                    alt=""
+                    width="13x"
+                  />
+                </span>
+                <input
+                  type="tel"
+                  name="phone"
+                  id=""
+                  placeholder="Phone No"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img
+                    src="{% static 'assets/gender.svg' %}"
+                    alt=""
+                    width="13x"
+                  />
+                </span>
+                <select name="gender" id="" placeholder="Gender" required>
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/dob.svg' %}" alt="" width="13x" />
+                </span>
+                <input
+                  type="text"
+                  name="dob"
+                  id=""
+                  placeholder="DOB"
+                  onmouseenter="(this.type='date')"
+                  onmouseleave="(this.type='text')"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form" id="form2">
+              <h1>Educational Info</h1>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/2.1.svg' %}" alt="" width="13x" />
+                </span>
+                <select
+                  name="education"
+                  id="education-select"
+                  class="w-100"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Select highest education
+                  </option>
+                  <option value="diploma">Diploma</option>
+                  <option value="be">Bachelor's</option>
+                  <option value="me">Master's</option>
+                </select>
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/2.2.svg' %}" alt="" width="13x" />
+                </span>
+                <input
+                  type="text"
+                  class="w-100"
+                  name="edu_major"
+                  placeholder="Major / Specialization"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/2.3.svg' %}" alt="" width="13x" />
+                </span>
+                <input
+                  type="text"
+                  class="w-100"
+                  name="institute"
+                  placeholder="Institute Name"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/2.4.svg' %}" alt="" width="13x" />
+                </span>
+                <input
+                  class="w-100"
+                  type="text"
+                  name="completion_year"
+                  id="completion_year"
+                  placeholder="Year of completion"
+                  onmouseenter="(this.type='month')"
+                  onmouseleave="(this.type='text')"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form" id="form3">
+              <h1>Professional Info</h1>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/3.1.svg' %}" alt="" width="13x" />
+                </span>
+                <input
+                  type="text"
+                  class="w-100"
+                  name="org"
+                  placeholder="Current Organization"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/3.2.svg' %}" alt="" width="13x" />
+                </span>
+                <input
+                  type="text"
+                  class="w-100"
+                  name="role"
+                  placeholder="Current Role"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/3.3.svg' %}" alt="" width="13x" />
+                </span>
+                <input
+                  class="w-100"
+                  type="text"
+                  name="joining_date"
+                  id="joining_date"
+                  placeholder="Date of Joining"
+                  onmouseenter="(this.type='month')"
+                  onmouseleave="(this.type='text')"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <span class="icon">
+                  <img src="{% static 'assets/3.4.svg' %}" alt="" width="13x" />
+                </span>
+                <select name="emp_type" id="emp_type" class="w-100" required>
+                  <option value="" disabled selected>
+                    Select employment type
+                  </option>
+                  <option value="part">Part-time</option>
+                  <option value="full">Full-time</option>
+                  <option value="intern">Intern</option>
+                  <option value="apprentice">Apprentice</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="navigation">
+              <button
+                type="button"
+                class="btn"
+                id="prevbtn"
+                style="display: none"
+              >
+                &lt; Previous
+              </button>
+
+              <button type="button" class="btn" id="nextbtn">Next &gt;</button>
+              <input
+                type="submit"
+                value="Submit"
+                class="btn"
+                id="submitBtn"
+                style="display: none"
+              />
+            </div>
+          </form>
+          <div class="icon-container">
+            <img
+              src="{% static 'assets/account_circle.svg' %}"
+              alt=""
+              width="224px"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
