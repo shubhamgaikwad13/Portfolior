@@ -88,7 +88,7 @@ form h1{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    gap : 10px
+    gap : 10px;
 }
 
 .form-input input,select{
@@ -160,5 +160,13 @@ form h1{
 .button:hover:active {
     color: #FFFFFFFF;
     background: #0095A9FF;
-  }
+}
 
+
+#profile_photo::before {
+    content: "Upload Photo";
+}
+
+#profile_photo::-webkit-file-upload-button{
+    visibility: hidden;
+}
