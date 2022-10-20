@@ -1,4 +1,5 @@
 let forms = document.querySelectorAll(".form");
+let icons = document.querySelectorAll(".side-icon");
 let currentStep = 0;
 const nextBtn = document.querySelector("#nextbtn");
 const prevBtn = document.querySelector("#prevbtn");
@@ -6,8 +7,10 @@ const submitBtn = document.querySelector("#submitBtn");
 
 function changeStep(action) {
   forms[currentStep].style.display = "none";
+  icons[currentStep].style.display = "none";
   currentStep = action == "prev" ? currentStep - 1 : currentStep + 1;
   forms[currentStep].style.display = "block";
+  icons[currentStep].style.display = "block";
 
   nextBtn.style.display = "inline-block";
   submitBtn.style.display = "none";

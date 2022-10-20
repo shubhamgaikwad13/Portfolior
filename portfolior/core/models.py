@@ -12,6 +12,7 @@ class FormData(models.Model):
     phone_no = models.CharField(max_length=12)
     gender = models.CharField(max_length=6)
     date_of_birth = models.DateField()
+    #profile_pic = models.ImageField(upload_to=)
 
     # education info
     highest_edu = models.CharField(max_length=20)

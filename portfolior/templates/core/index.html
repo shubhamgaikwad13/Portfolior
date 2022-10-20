@@ -184,9 +184,7 @@
       </div>
 
       <div class="navigation">
-        <button type="button" class="btn" id="prevbtn" style="display: none">
-          &lt; Previous
-        </button>
+        <button type="button" class="btn" id="prevbtn" style="display: none">&lt; Previous</button>
 
         <button type="button" class="btn" id="nextbtn">Next &gt;</button>
         <input
@@ -200,10 +198,25 @@
     </form>
     <div class="icon-container">
       <img
+        style = "display: block";
+        class = "side-icon"
         src="{% static 'assets/account_circle.svg' %}"
         alt=""
         width="224px"
       />
+      <img
+        class = "side-icon"
+        src="{% static 'assets/school.svg' %}"
+        alt=""
+        width="224px"
+      />
+      <img
+        class = "side-icon"
+        src="{% static 'assets/work.svg' %}"
+        alt=""
+        width="224px"
+      />
+
     </div>
   </div>
 </div>

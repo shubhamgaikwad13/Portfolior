@@ -65,7 +65,6 @@ main{
     display: flex;
     width: 50%;
     height: 100%;
-
     align-items: stretch;
     justify-content: space-evenly;
     flex-direction: column;
@@ -122,6 +121,10 @@ form h1{
     box-shadow: inherit;
     justify-content: center;
     align-items: center;
+}
+
+.side-icon{
+    display: none;
 }
 
 .navigation{
