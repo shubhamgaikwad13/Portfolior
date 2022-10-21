@@ -8,10 +8,11 @@ const submitBtn = document.querySelector("#submitBtn");
 function changeStep(action) {
   forms[currentStep].style.display = "none";
   icons[currentStep].style.display = "none";
+  console.log(currentStep)
   currentStep = action == "prev" ? currentStep - 1 : currentStep + 1;
   forms[currentStep].style.display = "block";
   icons[currentStep].style.display = "block";
-
+  console.log(currentStep)
   nextBtn.style.display = "inline-block";
   submitBtn.style.display = "none";
 
