@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% load static %} {% block stylesheet %}
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+{% endblock %} {%block main%}
+<div class="wrapper">
+  <div class="form-container id="101">
+    <form action="{% url 'register' %}"  style="width: 100%" method="post">
+      {% csrf_token %}
+      <div class="form" style="display: block">
+        <h1>SIGN UP</h1>
+        <div class="form-input">
+          <span class="icon">
+            <img src="{% static 'assets/fname.svg' %}" alt="" width="13x" />
+          </span>
+          <input
+            type="text"
+            name="username"
+            id=""
+            placeholder="Username"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <span class="icon">
+            <img src="{% static 'assets/fname.svg' %}" alt="" width="13x" />
+          </span>
+          <input
+            type="password"
+            name="pwd"
+            id=""
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <span class="icon">
+            <img src="{% static 'assets/fname.svg' %}" alt="" width="13x" />
+          </span>
+          <input
+            type="password"
+            name="conf_pwd"
+            id=""
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        
+        <div class="form-input">
+          <input
+            type="submit"
+            id=""
+            placeholder="Submit"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
