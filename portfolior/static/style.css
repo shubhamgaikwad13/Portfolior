@@ -92,7 +92,6 @@ main{
     justify-content: space-evenly;
     flex-direction: column;
     /* gap: 20px; */
-
 }
 
 .form {
@@ -166,7 +165,7 @@ form h1{
     opacity: 1;
     border: none;
     border-radius: 8px;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
 }
 
 .btn a {
@@ -192,4 +191,56 @@ form h1{
 
 #profile_photo::-webkit-file-upload-button{
     visibility: hidden;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+
+    .form-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 85vw;
+        width: 55.5vw;
+        max-width: 70vh;
+        max-height: 107.6vh;
+    }
+
+    .icon-container {
+        width: 25%;
+        border-radius: 80%;
+        position: relative;
+        top: -10%;
+    }
+
+    /* .icon-container img {
+        width: 20%;
+    } */
+
+    form h1 {
+        font-size: 50px;
+    }
+
+
+    .form-container form {
+        width: 100%;
+    }
+
+    .form {
+        background-color: red;
+        height: 100%;
+    }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
 }
