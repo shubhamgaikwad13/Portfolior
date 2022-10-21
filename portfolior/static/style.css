@@ -27,6 +27,27 @@
     letter-spacing: 1.5px;
 }
 
+.nav-links {
+    /* background-color: red; */
+    width: 100%;
+}
+
+.nav-link {
+   float: right;
+    margin-right: 22px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    background-color: #323743FF;
+    padding: 7px;
+    border-radius: 8px;
+    letter-spacing: 1.7px;
+}
+
+.title {
+    color: #fff;
+}
+
 main{
     display: flex;
     /* width: 100%; */
@@ -45,6 +66,8 @@ main{
     justify-content: center;
     flex-wrap: nowrap;
 }
+
+
 
 .form-container{
     display: flex;
